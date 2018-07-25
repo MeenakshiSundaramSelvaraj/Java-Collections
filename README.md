@@ -1,18 +1,6 @@
 # Java-Collections
 
-ArrayList<br/>
-ArrayList internally uses dynamic array to store the elements.<br/>
-ArrayList class can contain duplicate elements.<br/>
-ArrayList class maintains insertion order.<br/>
-ArrayList class is non synchronized.<br/>
-ArrayList allows random access because array works at the index basis.<br/>
-ArrayList increases its size by 50% of the array size.<br/>
-ArrayList class, manipulation is slow because a lot of shifting needs to be occurred if any element is removed from the array list.<br/>
+java-collections represents a unified library for storing and manipulating groups of object. This implementation offer a variety of representations, including:
 
-LinkedList<br/>
-LinkedList internally uses doubly linked list to store the elements.<br/>
-LinkedList class can contain duplicate elements.<br/>
-LinkedList class maintains insertion order.<br/>
-LinkedList class is non synchronized.<br/>
-LinkedList class, manipulation is fast because no shifting needs to be occurred.<br/>
-LinkedList class can be used as list, stack or queue.<br/>
+arrays (ArrayList) - have the properties of random-access memory(because array works at the index basis): very fast for accessing elements by position and for iterating over them, but slower for inserting and removing elements at arbitrary positions because require adjusting the position of other elements. 
+linked lists (LinkedList) - accessing elements by position is slow, because you have to follow the reference chain from the start of the list, but insertion and removal operations can be performed in constant time by rearranging the cell references.
