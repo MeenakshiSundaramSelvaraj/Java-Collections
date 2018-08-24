@@ -1,0 +1,139 @@
+List
+List allows duplicate elements. Any number of duplicate elements can be inserted into the list without affecting the same existing values and their indexes.
+List allows any number of null values.
+List and all of its implementation classes maintains the insertion order.
+  
+Set
+Set doesn’t allow duplicates. Set and all of the classes which implements Set interface should have unique elements.
+Set allows single null value at most.
+Set doesn’t maintain any order; still few of its classes sort the elements in an order such as LinkedHashSet maintains the elements in insertion order.
+  
+Map
+Map stored the elements as key & value pair. Map doesn’t allow duplicate keys while it allows duplicate values.
+Map can have single null key at most and any number of null values.  
+Similar to Set Map also doesn’t stores the elements in an order, however few of its classes does the same. For e.g. TreeMap sorts the map in the ascending
+order of keys and LinkedHashMap sorts the elements in the insertion order, the order in which the elements got added to the LinkedHashMap.
+
+ArrayList    
+ArrayList internally uses dynamic array to store the elements.
+ArrayList class can contain duplicate elements.
+ArrayList class maintains insertion order.
+ArrayList class is non synchronized.
+ArrayList allows random access because array works at the index basis.     
+ArrayList increases its size by 50% of the array size.  
+ArrayList class, manipulation is slow because a lot of shifting needs to be occurred if any element is removed from the array list.
+ArrayList can be synchronized by
+Collection.synchronizedList(List list)
+  
+LinkedList
+LinkedList internally uses doubly linked list to store the elements.
+LinkedList class can contain duplicate elements.
+LinkedList class maintains insertion order.
+LinkedList class is non synchronized.
+LinkedList class, manipulation is fast because no shifting needs to be occurred.
+LinkedList class can be used as list, stack or queue.
+  
+HashSet 
+HashSet stores the elements by using a mechanism called hashing.
+HashSet contains unique elements only.
+Set allows single null value at most.
+
+TreeSet
+Contains unique elements only like HashSet.
+Access and retrieval times are quiet fast.
+it canot have null value
+Maintains ascending order.
+
+HashMap
+HashMap stored the elements as key & value pair. 
+It may have one null key and multiple null values.
+It maintains no order.  
+HashMap can be synchronized by
+Map m = Collections.synchronizeMap(hashMap);	
+
+
+ConcurrentHashMap
+ConcurrentHashMap stored the elements as key & value pair. 
+Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+ConcurrentHashMap null value is not allowed for key and value, otherwise we will get Run-time exception saying NullPointerException.
+ConcurrentHashMap is introduced as an alternative to Hashtable in jdk 1.5 as part of java concurrency package.
+ConcurrentHashMap performs better than Hashtable and synchronizedMap because it only locks a portion of Map, instead of whole Map.
+Use ConcurrentHashMap can be safely used in concurrent multi-threaded environment but also provides better performance over Hashtable and synchronizedMap.
+
+
+TreeMap
+TreeMap stored the elements as key & value pair.  It implements the NavigableMap interface and extends AbstractMap class.
+It contains only unique elements.
+It cannot have null key but can have multiple null values.
+It is same as HashMap instead maintains ascending order.
+
+Hashtable
+Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+Hashtable cannot contain any null key or null value.
+Two different keys with the same hash value is known as hash-collision. Two different entries will be kept in a single hash bucket to avoid the collision.
+  
+Vector
+Vector is synchronized.
+Vector increases its size by 100% (doubling the array size) of the array size.
+  
+Properties
+The properties object contains key and value pair both as a string.
+The java.util.Properties class is the subclass of Hashtable.
+It can be used to get property value based on the property key.
+The Properties class provides methods to get data from properties file and store data into properties file. Moreover, it can be used to get properties of system.
+
+Advantage of properties file
+Recompilation is not required, if information is changed from properties file:
+If any information is changed from the properties file, you don't need to recompile the java class. It is used to store information which is to be changed frequently.
+  
+Comparable
+Comparable provides only one sort of sequence.
+It provides one method named compareTo().
+It is found in java.lang package.
+If we implement Comparable interface, actual class is modified.
+We can sort the list elements of Comparable type by Collections.sort(List) method.
+  
+Comparator
+Comparator provides multiple sort of sequences.
+It provides one method named compare().
+it is found in java.util package.
+Actual class is not modified.
+We can sort the list elements of Comparator type by Collections.sort(List,Comparator) method.
+  
+Iterator
+Iterator traverses the elements in forward direction only.
+Iterator can be used in List, Set and Queue.
+Iterator can traverse legacy and non-legacy elements.
+Iterator is fail-fast. //Fail-fast iterators throw ConcurrentModificationException whereas fail-safe iterator never throws ConcurrentModificationException.
+Iterator is slower than Enumeration.
+
+ListIterator
+ListIterator traverses the elements in backward and forward directions both.
+ListIterator can be used in List only.
+  
+Enumeration
+Enumeration can traverse only legacy classes like Vector, Stack and HashTable.
+Enumeration is not fail-fast.
+Enumeration is faster than Iterator. 
+Iterator has a remove() method while Enumeration doesn't. Enumeration acts as Read-only interface, Because it has the methods only to traverse and fetch the objects, 
+Where as using Iterator we can manipulate the objects also like adding and removing the objects.
+
+Stack
+Stack is a data structure that is based on last-in-first-out rule (LIFO).
+Queues
+queues is a data structure that is based on First-in-first-out (FIFO) rule.
+
+
+Fail Fast 
+Fail-Fast iterators doesn’t allow modifications of a collection while iterating over it.
+These iterators throw ConcurrentModificationException if a collection is modified while iterating over it.
+They use original collection to traverse over the elements of the collection.
+These iterators don’t require extra memory.
+Ex : Iterators returned by ArrayList, Vector, HashMap.	
+
+Fail Safe	
+Fail-Safe iterators allow modifications of a collection while iterating over it.
+These iterators don’t throw any exceptions if a collection is modified while iterating over it.
+They use copy of the original collection to traverse over the elements of the collection.
+These iterators require extra memory to clone the collection.
+Ex : Iterator returned by ConcurrentHashMap.
