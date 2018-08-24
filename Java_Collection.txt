@@ -1,17 +1,17 @@
 List
-List allows duplicate elements. Any number of duplicate elements can be inserted into the list without affecting the same existing values and their indexes.
+List allows duplicate elements. 
 List allows any number of null values.
 List and all of its implementation classes maintains the insertion order.
   
 Set
-Set doesn’t allow duplicates. Set and all of the classes which implements Set interface should have unique elements.
+Set doesnâ€™t allow duplicates. Set and all of the classes which implements Set interface should have unique elements.
 Set allows single null value at most.
-Set doesn’t maintain any order; still few of its classes sort the elements in an order such as LinkedHashSet maintains the elements in insertion order.
+Set doesnâ€™t maintain any order; still few of its classes sort the elements in an order such as LinkedHashSet maintains the elements in insertion order.
   
 Map
-Map stored the elements as key & value pair. Map doesn’t allow duplicate keys while it allows duplicate values.
+Map stored the elements as key & value pair. Map doesnâ€™t allow duplicate keys while it allows duplicate values.
 Map can have single null key at most and any number of null values.  
-Similar to Set Map also doesn’t stores the elements in an order, however few of its classes does the same. For e.g. TreeMap sorts the map in the ascending
+Similar to Set Map also doesnâ€™t stores the elements in an order, however few of its classes does the same. For e.g. TreeMap sorts the map in the ascending
 order of keys and LinkedHashMap sorts the elements in the insertion order, the order in which the elements got added to the LinkedHashMap.
 
 ArrayList    
@@ -84,7 +84,7 @@ The Properties class provides methods to get data from properties file and store
 
 Advantage of properties file
 Recompilation is not required, if information is changed from properties file:
-If any information is changed from the properties file, you don't need to recompile the java class. It is used to store information which is to be changed frequently.
+If any information is changed from the properties file, you do not need to recompile the java class. It is used to store information which is to be changed frequently.
   
 Comparable
 Comparable provides only one sort of sequence.
@@ -115,7 +115,7 @@ Enumeration
 Enumeration can traverse only legacy classes like Vector, Stack and HashTable.
 Enumeration is not fail-fast.
 Enumeration is faster than Iterator. 
-Iterator has a remove() method while Enumeration doesn't. Enumeration acts as Read-only interface, Because it has the methods only to traverse and fetch the objects, 
+Iterator has a remove() method while Enumeration does not. Enumeration acts as Read-only interface, Because it has the methods only to traverse and fetch the objects, 
 Where as using Iterator we can manipulate the objects also like adding and removing the objects.
 
 Stack
@@ -125,15 +125,15 @@ queues is a data structure that is based on First-in-first-out (FIFO) rule.
 
 
 Fail Fast 
-Fail-Fast iterators doesn’t allow modifications of a collection while iterating over it.
+Fail-Fast iterators doesnâ€™t allow modifications of a collection while iterating over it.
 These iterators throw ConcurrentModificationException if a collection is modified while iterating over it.
 They use original collection to traverse over the elements of the collection.
-These iterators don’t require extra memory.
+These iterators donâ€™t require extra memory.
 Ex : Iterators returned by ArrayList, Vector, HashMap.	
 
 Fail Safe	
 Fail-Safe iterators allow modifications of a collection while iterating over it.
-These iterators don’t throw any exceptions if a collection is modified while iterating over it.
+These iterators donâ€™t throw any exceptions if a collection is modified while iterating over it.
 They use copy of the original collection to traverse over the elements of the collection.
 These iterators require extra memory to clone the collection.
 Ex : Iterator returned by ConcurrentHashMap.
