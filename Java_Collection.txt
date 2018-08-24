@@ -1,12 +1,11 @@
 List
-List allows duplicate elements. 
-List allows any number of null values.
+List allows duplicate elements and any number of null values.
 List and all of its implementation classes maintains the insertion order.
   
 Set
-Set doesn’t allow duplicates. Set and all of the classes which implements Set interface should have unique elements.
+Set doesn’t allow duplicates. Set should have unique elements.
 Set allows single null value at most.
-Set doesn’t maintain any order; still few of its classes sort the elements in an order such as LinkedHashSet maintains the elements in insertion order.
+Set doesn’t maintain any order.
   
 Map
 Map stored the elements as key & value pair. Map doesn’t allow duplicate keys while it allows duplicate values.
